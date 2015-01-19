@@ -14,11 +14,12 @@ send a link to the movie to me or post the movie somewhere
 
 requires 
  * ssmtp
- > send email relay through gmail
- > apt-get install ssmtp -y
- > vi /etc/ssmtp/ssmtp.conf
- > http://rpi.tnet.com/project/faqs/smtp
- - lighttpd
+send email relay through gmail http://rpi.tnet.com/project/faqs/smtp
+```
+apt-get install ssmtp -y
+vi /etc/ssmtp/ssmtp.conf
+```
+ - lighttpd - allow file browsing
  - git
  - raspi-config - enable the camera
  
