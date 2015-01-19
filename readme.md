@@ -52,14 +52,13 @@ FILES
 ----
  * <strong>checkip.sh</strong> run every 30 minutes from cron. email any changes to ip address to me.
  * <strong>get_sunrise.sh</strong> run daily at 1AM from cron. create crontab line to launch snapshots at the right time.
- * <strong>localip</strong> 
- * <strong>myIP</strong> 
- * <strong>publicip</strong> 
- * <strong>rawcron.file</strong> 
- * <strong>readme.md</strong> 
- * <strong>showmenow.sh</strong> 
- * <strong>snapshot.sh</strong> 
- * <strong>sr.html</strong> 
+ * <strong>localip</strong> contains local ip address for comparison by checkip.sh
+ * <strong>publicip</strong> contains public ip address for comparison by checkip.sh
+ * <strong>rawcron.file</strong> contains original unmolested crontab entries. UPDATE THIS IF YOU CHANGE YOUR CRON OUTSIDE OF THIS STUFF
+ * <strong>readme.md</strong> this file
+ * <strong>showmenow.sh</strong> take a snapshot and email it to me. For troubleshooting. also done on bootup.
+ * <strong>snapshot.sh</strong> this does the timelapse "work" - take photos, create movie, notify, email, upload, etc
+ * <strong>sr.html</strong> this is the file pulled from NOAA daily which is parsed to get the sunrise time. It also contains a cool image of the phase of the moon!
 
 
 TODO 
