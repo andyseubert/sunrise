@@ -8,18 +8,20 @@ or post the movie somewhere
 
 requires 
  * ssmtp
- - /root/bootalert.py
- - /root/sendsms.py
- 
- - setup:
  - send email relay through gmail
   apt-get install ssmtp -y
  vi /etc/ssmtp/ssmtp.conf
  http://rpi.tnet.com/project/faqs/smtp
- 
  - lighttpd
  - git
  - raspi-config - enable the camera
+ 
+Setup:
+
+ - /root/bootalert.py : from other projects, sends ip address to me on boot
+ - /root/sendsms.py : from other projects - to text me something.. on boot
+ 
+ 
  - ffmpeg http://notes.theorbis.net/2010/05/creating-time-lapse-with-ffmpeg.html
  - disable camera LED
 echo  "disable_camera_led=1" >> /boot/config.txt
