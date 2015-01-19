@@ -13,4 +13,5 @@ mkdir $DEST
 # take snapshots once per minute for one hour
 # name them with the time taken
 
-raspistill -vf -hf -o $DEST/$DATE.jpg
+raspistill -tl 60000 -t 7200000 -o $DEST/sunrise_%04d.jpg
+
