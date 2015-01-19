@@ -17,7 +17,7 @@ let "H=$H-1"
 M=$(echo $SUNUP | cut -d ":" -f 2)
 
 # m h  dom mon dow   command
-CRONLINE="$M $H $DOM $MON * /usr/local/sunrise/snapshot.sh"
+CRONLINE="$M $H $DOM $MON * /usr/local/sunrise/snapshot.sh > /dev/null 2>&1"
 
 # copy the original crontab file to tmp
 
