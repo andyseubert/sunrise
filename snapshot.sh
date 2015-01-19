@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 # this will get run from crontab each day 
 
