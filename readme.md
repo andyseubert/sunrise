@@ -50,16 +50,16 @@ ffmpeg -r 12 -i test_%04d.jpg -sameq -s hd720 -vcodec libx264 -crf 25 $LIGHTTPD$
 
 FILES
 ----
- * <strong>checkip.sh</srtong> run every 30 minutes from cron. email any changes to ip address to me.
- * <strong>get_sunrise.sh</srtong> run daily at 1AM from cron. create crontab line to launch snapshots at the right time.
- * <strong>localip</srtong> 
- * <strong>myIP</srtong> 
- * <strong>publicip</srtong> 
- * <strong>rawcron.file</srtong> 
- * <strong>readme.md</srtong> 
- * <strong>showmenow.sh</srtong> 
- * <strong>snapshot.sh</srtong> 
- * <strong>sr.html</srtong> 
+ * <strong>checkip.sh</strong> run every 30 minutes from cron. email any changes to ip address to me.
+ * <strong>get_sunrise.sh</strong> run daily at 1AM from cron. create crontab line to launch snapshots at the right time.
+ * <strong>localip</strong> 
+ * <strong>myIP</strong> 
+ * <strong>publicip</strong> 
+ * <strong>rawcron.file</strong> 
+ * <strong>readme.md</strong> 
+ * <strong>showmenow.sh</strong> 
+ * <strong>snapshot.sh</strong> 
+ * <strong>sr.html</strong> 
 
 
 TODO 
