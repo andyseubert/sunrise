@@ -11,10 +11,10 @@ or post the movie somewhere
 
 requires 
  * ssmtp
->send email relay through gmail
->apt-get install ssmtp -y
->vi /etc/ssmtp/ssmtp.conf
->[http://rpi.tnet.com/project/faqs/smtp]
+ > send email relay through gmail
+ > apt-get install ssmtp -y
+ > vi /etc/ssmtp/ssmtp.conf
+ > http://rpi.tnet.com/project/faqs/smtp
  - lighttpd
  - git
  - raspi-config - enable the camera
