@@ -17,6 +17,7 @@ echo  "disable_camera_led=1" >> /boot/config.txt
 
 - determine sunrise/sunset from shell script  - run from crontab every day at 1 am
 get_sunrise.sh
+crontab -l > /usr/local/sunrise/rawcron.file 
 
 - capture every minute or two from 30 minutes before to 30 minutes after sunrise and sunset
 snapshot.sh
