@@ -7,6 +7,7 @@ send a link to the movie to me
 or post the movie somewhere
 
 requires 
+ * ssmtp
  - /root/bootalert.py
  - /root/sendsms.py
  
