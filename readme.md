@@ -22,8 +22,19 @@ vi /etc/ssmtp/ssmtp.conf
  
 Setup:
 -----
- * /root/bootalert.py : from other projects, sends ip address to me on boot
- * /root/sendsms.py : from other projects - to text me something.. on boot
+ * in order to know when the raspberry boots up I do this to all my raspberry pis:
+   * add to /etc/init.d/rc.local
+```
+echo "awake" | mail -s "SunriseRaspberry-BootedUpJustNow" 1234567890\@yourtext.yoursms.com >> /var/log/rc.local.log 2>&1
+```
+   * Add this to check the ip address on boot
+```
+/usr/local/sunrise/checkip.sh > /var/log/rc.local.log 2>&1
+```
+   * Add this to send a photo of what it "sees" on boot
+```
+/usr/local/sunrise/showmenow.sh
+```
  * ffmpeg http://notes.theorbis.net/2010/05/creating-time-lapse-with-ffmpeg.html
  * disable camera LED
 ```
