@@ -48,4 +48,20 @@ http://notes.theorbis.net/2010/05/creating-time-lapse-with-ffmpeg.html
 ffmpeg -r 12 -i test_%04d.jpg -sameq -s hd720 -vcodec libx264 -crf 25 $LIGHTTPD$DATE.MP4
 ```
 
+FILES
+----
+ * checkip.sh *run every 30 minutes from cron. email any changes to ip address to me*
+ * get_sunrise.sh
+ * localip
+ * myIP
+ * publicip
+ * rawcron.file
+ * readme.md
+ * showmenow.sh
+ * snapshot.sh
+ * sr.html
+
+
+TODO 
+----
  * upload to owncloud or some such, and send links via email or post links to blog or twitter automatically
