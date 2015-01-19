@@ -1,13 +1,16 @@
 SUNRISE TIMELAPSE CAPTURE
 ======
 
-mostly written in bash 
-using the built in camera of raspberry pi
-every day get the sunrise time
+ * mostly written in bash.
+
+using the built in camera of raspberry pi,
+every day get the sunrise time,
+
 start taking photos one hour before sunrise and continue every minute until one hour after sunrise
+
 make those photos into a short movie - 10 seconds long?
-send a link to the movie to me 
-or post the movie somewhere
+
+send a link to the movie to me or post the movie somewhere
 
 requires 
  * ssmtp
