@@ -6,6 +6,10 @@ REPORTTO="andys@florapdx.com"
 # check local ip address
 CURRENTIP=$(/sbin/ifconfig | grep "inet addr" | grep -v 127.0.0.1 | awk {'print $2'})
 #echo "$CURRENTIP"
+if [ "$CURRENTIP" = "" ] 
+then 
+exit 1
+fi
 
 # if old ip was recorded earlier then
 if [ -f $LOCALIPFILE ]
