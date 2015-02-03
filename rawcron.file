@@ -22,4 +22,4 @@
 # m h  dom mon dow   command
 30 * * * * /usr/local/sunrise/checkip.sh > /dev/null 2>&1
 15 1 * * * /usr/local/sunrise/get_sunrise.sh > /dev/null 2>&1
-
+*/1 * * * * /home/autossh/create_ssh_tunnel.sh > tunnel.log 2>&1
