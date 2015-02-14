@@ -31,5 +31,7 @@ DST="public_html/mythingonthe/"
 echo "<a href=$DATE.avi><br>$DATE.avi</a>" >> index.html
 scp -i /home/andys/.ssh/tunnel-id $LIGHTTPD$DATE.avi florapor@floraportland.com:$DST
 scp -i /home/andys/.ssh/tunnel-id index.html florapor@floraportland.com:$DST
+## scp the directory
+scp -i /home/andys/.ssh/tunnel-id $DEST florapor@floraportland.com:$DST
 echo "http://mythingonthe.net/$DATE.avi" | mail -s "new sunrise video link ready" andys\@florapdx.com
 
