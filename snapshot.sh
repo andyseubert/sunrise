@@ -7,8 +7,8 @@ LIGHTTPD="/var/www/"
 DATE=$(date +"%Y-%m-%d_%H%M")
 
 # set that as destination for snapshots
-DEST=$LIGHTTPD$(date +"%Y-%m-%d")
-mkdir $DEST
+DESTDIR=$(date +"%Y-%m-%d")
+mkdir $LIGHTTPD$DESTDIR
 
 # take snapshots once per minute for one hour
 # name them with the time taken
@@ -29,7 +29,7 @@ echo "$BODY" | mail -s "new sunrise ready" andys\@florapdx.com
 HOST="floraportland.com"
 DST="public_html/mythingonthe/"
 echo "<a href=$DATE.avi><br>$DATE.avi</a><BR>" >> $LIGHTTPD/index.html
-echo "<a href=$DEST><br>$DEST</a><BR>" >> $LIGHTTPD/index.html
+echo "<a href=$DESTDIR><br>$DESTDIR</a><BR>" >> $LIGHTTPD/index.html
 scp -i /home/andys/.ssh/tunnel-id $LIGHTTPD$DATE.avi florapor@floraportland.com:$DST
 scp -i /home/andys/.ssh/tunnel-id $LIGHTTPD/index.html florapor@floraportland.com:$DST
 ## scp the directory
