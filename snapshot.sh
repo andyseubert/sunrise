@@ -28,10 +28,11 @@ echo "$BODY" | mail -s "new sunrise ready" andys\@florapdx.com
 ## scp the file 
 HOST="floraportland.com"
 DST="public_html/mythingonthe/"
-echo "<a href=$DATE.avi><br>$DATE.avi</a>" >> index.html
+echo "<a href=$DATE.avi><br>$DATE.avi</a><BR>" >> $LIGHTTPD/index.html
+echo "<a href=$DEST><br>$DEST</a><BR>" >> $LIGHTTPD/index.html
 scp -i /home/andys/.ssh/tunnel-id $LIGHTTPD$DATE.avi florapor@floraportland.com:$DST
-scp -i /home/andys/.ssh/tunnel-id index.html florapor@floraportland.com:$DST
+scp -i /home/andys/.ssh/tunnel-id $LIGHTTPD/index.html florapor@floraportland.com:$DST
 ## scp the directory
-scp -i /home/andys/.ssh/tunnel-id $DEST florapor@floraportland.com:$DST
+scp -ri /home/andys/.ssh/tunnel-id $DEST florapor@floraportland.com:$DST
 echo "http://mythingonthe.net/$DATE.avi" | mail -s "new sunrise video link ready" andys\@florapdx.com
 
