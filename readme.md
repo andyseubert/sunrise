@@ -73,6 +73,7 @@ FILES
 
 UPLOAD TO YOUTUBE
 ------
+```
 # get today's avi from the server
 wget -nH -rA "$(date +"%Y-%m-%d")*.avi" http://mythingonthe.net
 # rename them
@@ -90,7 +91,7 @@ sleep 90
 rm -f $X
 done
 
-
+```
 
 TODO 
 ----
