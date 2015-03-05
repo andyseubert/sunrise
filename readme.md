@@ -71,8 +71,27 @@ FILES
  * <strong>snapshot.sh</strong> this does the timelapse "work" - take photos, create movie, notify, email, upload, etc
  * <strong>sr.html</strong> this is the file pulled from NOAA daily which is parsed to get the sunrise time. It also contains a cool image of the phase of the moon!
 
+UPLOAD TO YOUTUBE
+------
+# get today's avi from the server
+wget -nH -rA "$(date +"%Y-%m-%d")*.avi" http://mythingonthe.net
+# rename them
+for X in $(ls); do
+FILE=$(echo $X|cut -d "_" -f 1)
+echo "$FILE.avi"
+mv $X $FILE.avi
+done
+
+## upload to youtube
+for X in $(ls); do
+TEXT=$(date -d $(echo $X|cut -d "." -f 1) +"%B %d %Y")
+youtube-upload -m you@yourdomain.com -p ***passwordhere*** -t "Portland Oregon sunrise $TEXT" -c "Entertainment" $X
+sleep 90
+rm -f $X
+done
+
 
 
 TODO 
 ----
- * upload to owncloud or some such, and send links via email or post links to blog or twitter automatically
+ * post links to blog or twitter or facebooks automatically
