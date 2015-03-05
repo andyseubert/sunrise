@@ -1,7 +1,8 @@
 #! /bin/bash
 
 # cd to temp dir
-cd /tmp
+mkdir /tmp/sunriseavi
+cd /tmp/sunriseavi
 
 # get today's avi from the server
 wget -nH -rA "$(date +"%Y-%m-%d")*.avi" http://yourthingonthe.net
