@@ -14,7 +14,7 @@ DESTDIR=$LIGHTTPD$DEST
 # take snapshots once per minute for one hour
 # name them with the time taken
 
-raspistill -tl 60000 -t 7200000 -o $DESTDIR/sunrise_%04d.jpg
+raspistill -tl 30000 -t 7200000 -o $DESTDIR/sunrise_%04d.jpg
 
 # use ffmpeg to make a video
 # store it in the root of the lighttpd directory
