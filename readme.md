@@ -42,11 +42,11 @@ echo  "disable_camera_led=1" >> /boot/config.txt
 ```
  * determine sunrise/sunset from shell script  - run from crontab every day at 1 am
    * get_sunrise.sh
- * begin before running that script by capturing the existing crontab with this * 
-```
-crontab -l > /usr/local/sunrise/rawcron.file 
-```
-  * then get_sunrise.sh will daily replace  one line to the user crontab based on sunrise time of "today"
+ * get_sunrise.sh will daily schedule an 'at' job based on sunrise time of "today"
+'''
+RUNTIME="$H:$M AM"
+at $RUNTIME -f /usr/local/sunrise/snapshot.sh 
+'''
 * capture every minute or two from one hour before to one hour after sunrise and sunset
   * snapshot.sh is essentially running this:
 ```
@@ -92,6 +92,17 @@ rm -f $X
 done
 
 ```
+
+Disk Cleanup
+----
+the disk will fill up if you don't remove old files periodically.
+add to crontab
+'''
+0 13 * * * find /var/www/ -type d -ctime +30 -exec rm -rf {} +
+'''
+
+
+
 
 TODO 
 ----
