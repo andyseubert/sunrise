@@ -17,17 +17,19 @@ let "H=$H-1"
 M=$(echo $SUNUP | cut -d ":" -f 2)
 
 # m h  dom mon dow   command
-CRONLINE="$M $H $DOM $MON * /usr/local/sunrise/snapshot.sh > /dev/null 2>&1"
+#CRONLINE="$M $H $DOM $MON * /usr/local/sunrise/snapshot.sh > /dev/null 2>&1"
+RUNTIME="$H:$M AM"
+at $RUNTIME -f /usr/local/sunrise/snapshot.sh 
 
 # copy the original crontab file to tmp
 
-cp /usr/local/sunrise/rawcron.file /tmp/cron
+#cp /usr/local/sunrise/rawcron.file /tmp/cron
 
 # put my daily cron line into the temp file
-echo "$CRONLINE" >> /tmp/cron 
+#echo "$CRONLINE" >> /tmp/cron 
 
 # make crontab use the temp file for crontab
-crontab -u root /tmp/cron
+#crontab -u root /tmp/cron
 
 MOONIMG=$(grep image sr.html |cut -d "<" -f 3 | cut -d ">" -f 1 )
 IFS=$'\n' read -d '' -r -a LINK <<< "$MOONIMG"
