@@ -43,10 +43,10 @@ echo  "disable_camera_led=1" >> /boot/config.txt
  * determine sunrise/sunset from shell script  - run from crontab every day at 1 am
    * get_sunrise.sh
  * get_sunrise.sh will daily schedule an 'at' job based on sunrise time of "today"
-'''
+```
 RUNTIME="$H:$M AM"
 at $RUNTIME -f /usr/local/sunrise/snapshot.sh 
-'''
+```
 * capture every minute or two from one hour before to one hour after sunrise and sunset
   * snapshot.sh is essentially running this:
 ```
@@ -62,7 +62,7 @@ ffmpeg -r 12 -i test_%04d.jpg -sameq -s hd720 -vcodec libx264 -crf 25 $LIGHTTPD$
 FILES
 ----
  * <strong>checkip.sh</strong> run every 30 minutes from cron. email any changes to ip address to me.
- * <strong>get_sunrise.sh</strong> run daily at 1AM from cron. create crontab line to launch snapshots at the right time.
+ * <strong>get_sunrise.sh</strong> run daily at 1AM from cron. create at job to launch snapshots at the right time.
  * <strong>localip</strong> contains local ip address for comparison by checkip.sh
  * <strong>publicip</strong> contains public ip address for comparison by checkip.sh
  * <strong>rawcron.file</strong> contains original unmolested crontab entries. UPDATE THIS IF YOU CHANGE YOUR CRON OUTSIDE OF THIS STUFF
@@ -97,9 +97,9 @@ Disk Cleanup
 ----
 the disk will fill up if you don't remove old files periodically.
 add to crontab
-'''
+```
 0 13 * * * find /var/www/ -type d -ctime +30 -exec rm -rf {} +
-'''
+```
 
 
 
