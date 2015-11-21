@@ -22,6 +22,8 @@ vi /etc/ssmtp/ssmtp.conf
  
 Setup:
 -----
+ * to try to prolong the life of the sd card I tried the things below "Less Writing" from this page:
+  * https://raymii.org/s/blog/Broken_Corrupted_Raspberry_Pi_SD_Card.html
  * in order to know when the raspberry boots up I do this to all my raspberry pis:
    * add to /etc/init.d/rc.local
 ```
